@@ -1,11 +1,12 @@
 package ptbs;
 public class MeatProductMenu implements ProductMenu {
 
-	public void showMenu() {
-		ShowViewButtons();
-		ShowRadios();
-		ShowComboxes();
-		show();
+	public void showMenu(Trading theTrading, Person thePerson) {
+		showAddButton();
+		showViewButton();
+		showRadioButton();
+		showLabels();
+		showComboxes();
 	}
 
 	public void showAddButton() {

@@ -79,12 +79,14 @@ public class Login extends JDialog {
             if (buyerRadio.isSelected() == true)// Buyer
             {
                 userType = UserType.Buyer; // 0 for Buyer
-                file = new BufferedReader(new FileReader("BuyerInfo.txt"));
+                System.out.println("Buyer login");
+                file = new BufferedReader(new FileReader("ptbs/BuyerInfo.txt"));
+                //System.out.println("buyer info read in file");
             }
             else// Seller
             {
                 userType = UserType.Seller; // 1 for Seller
-                file = new BufferedReader(new FileReader("SellerInfo.txt"));
+                file = new BufferedReader(new FileReader("ptbs/SellerInfo.txt"));
             }
             userBox = userNameText.getText();
             String passwordBox = new String(passwordText.getPassword());
@@ -93,14 +95,28 @@ public class Login extends JDialog {
             while ((aline = file.readLine()) != null) {
                 userName = getUserName(aline);
                 password = GetPassword(aline);
+                //System.out.println("userName " + userName);
+                //System.out.println("password " + password);
+                //System.out.println(userBox);
+                //System.out.println(passwordBox);
+
                 if (userName.compareTo(userBox) == 0 && password.compareTo(passwordBox) == 0)
+                {
                     loginName = userName;
+                }
             }
             if (loginName != null) {
+            	m_bExit = true;
                 this.hide();
             }
+            else
+            {
+            	JOptionPane.showMessageDialog(this, "Enter a valid user name or password",
+                        "ERROR", JOptionPane.ERROR_MESSAGE);
+                System.exit(0);
+            }
         } catch (Exception ee) {
-            ;
+        	System.out.println(ee) ;
         }
 
     }

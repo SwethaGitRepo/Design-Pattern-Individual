@@ -1,5 +1,7 @@
 package ptbs;
-public class ClassProductList {
+import java.util.ArrayList;
+import java.io.*;
+public class ClassProductList extends ArrayList<Product> {
 
 	private ProductIterator productIterator;
 

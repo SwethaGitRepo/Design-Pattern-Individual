@@ -1,8 +1,10 @@
 package ptbs;
 public class Person {
 
+	public static final String userName = null;
 	private ProductMenu theProductMenu;
-	public int type;
+	ProductList productList;
+	public int type = 0;
 
 	public void showMenu() {
 
@@ -26,6 +28,10 @@ public class Person {
 
 	public ProductMenu createProductMenu() {
 		return null;
+	}
+
+	public void addProduct(Product theSelectedProduct) {
+		productList.add(theSelectedProduct);
 	}
 
 }

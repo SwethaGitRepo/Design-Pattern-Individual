@@ -1,4 +1,8 @@
 package ptbs;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 public class Facade {
 
 	private int userType;
@@ -7,7 +11,7 @@ public class Facade {
 
 	private int nProductCategory;
 
-	private ClassProductList theProductList;
+	 ProductList theProductList;
 
 	private Person thePerson;
 	public boolean login(UserInfoItem userinfoItem)
@@ -22,14 +26,14 @@ public class Facade {
 
 	public void addTrading()
 	{
-		ProductMenu theProductMenu;
-		if (thePerson.type == 0)/// student
+		UserMenu theUserMenu;
+		if (thePerson.type == 0)/// 
 		{
-			theProductMenu = new MeatProductMenu();
+			theUserMenu = new BuyerMenu();
 		}
 		else
 		{
-			theProductMenu = new ProduceProductMenu();
+			theUserMenu = new SellerMenu();
 		}
 		//Trading theTrading = new Trading();
 		//theProductMenu.showMenu(theTrading, thePerson);
@@ -64,10 +68,44 @@ public class Facade {
 
 	}
 
-	public void attachProductToUser() {
-
+	void attachProductToUser() 
+	{
+		BufferedReader file;
+		try {
+			file = new BufferedReader(new FileReader("ptbs/UserProduct.txt"));
+			String aline, strUserName, strProductName;
+			while ((aline = file.readLine()) != null) // not the EOF
+			{
+				strUserName = getUserName(aline);
+				strProductName = getProductName(aline);
+				if (strUserName.compareTo(thePerson.userName) == 0) /// the UserName mateches
+				{
+					theSelectedProduct = findProductByItsName(strProductName);
+					if (theSelectedProduct != null) /// Find the product in the productList--->attach
+					{
+						thePerson.addProduct(theSelectedProduct);
+					}
+				}
+			}
+		} catch (Exception ee) {
+			;
+		}
+	}
+	
+	private Product findProductByItsName(String strProductName) {
+		ProductIterator Iterator = new ProductIterator(theProductList);
+		return (Product) Iterator.next(strProductName);
 	}
 
+	private String getUserName(String aline) {
+		int sep = aline.lastIndexOf(':');
+		return aline.substring(0, sep);
+	}
+	
+	private String getProductName(String aline) {
+		int sep = aline.lastIndexOf(':');
+		return aline.substring(sep + 1, aline.length());
+	}
 	public Product selectProduct() {
 		return theSelectedProduct;
 	}

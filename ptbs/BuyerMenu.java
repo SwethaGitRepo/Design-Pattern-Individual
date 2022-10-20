@@ -1,11 +1,11 @@
 package ptbs;
-public class ProduceProductMenu implements ProductMenu {
+public class BuyerMenu implements UserMenu {
 
 	public void showComboxes() {
 
 	}
 
-	public void showMenu(Trading theTrading, Person thePerson) {
+	public void showMenu() {
 
 	}
 
