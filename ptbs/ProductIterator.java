@@ -1,12 +1,13 @@
-public class OfferingIterator {
+package ptbs;
+public class ProductIterator {
 
-	private OfferingList offeringList;
+	private ClassProductList classProductList;
 
 	public boolean hasNext() {
 		return false;
 	}
 
-	public Offering next() {
+	public Product next() {
 		return null;
 	}
 

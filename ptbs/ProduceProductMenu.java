@@ -1,3 +1,4 @@
+package ptbs;
 public class ProduceProductMenu implements ProductMenu {
 
 	public void showComboxes() {

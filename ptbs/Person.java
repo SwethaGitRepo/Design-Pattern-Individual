@@ -1,4 +1,8 @@
-public class MeatProductMenu implements ProductMenu {
+package ptbs;
+public class Person {
+
+	private ProductMenu theProductMenu;
+	public int type;
 
 	public void showMenu() {
 
@@ -20,8 +24,8 @@ public class MeatProductMenu implements ProductMenu {
 
 	}
 
-	public void showComboxes() {
-
+	public ProductMenu createProductMenu() {
+		return null;
 	}
 
 }

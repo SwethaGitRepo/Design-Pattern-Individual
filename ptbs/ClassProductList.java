@@ -1,3 +1,4 @@
+package ptbs;
 public class ClassProductList {
 
 	private ProductIterator productIterator;

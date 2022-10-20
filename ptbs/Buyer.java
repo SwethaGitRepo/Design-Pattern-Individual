@@ -1,4 +1,5 @@
-public class Seller extends Person {
+package ptbs;
+public class Buyer extends Person {
 
 	public void showMenu() {
 

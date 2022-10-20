@@ -1,9 +1,11 @@
-public class Person {
-
-	private ProductMenu theProductMenu;
+package ptbs;
+public class MeatProductMenu implements ProductMenu {
 
 	public void showMenu() {
-
+		ShowViewButtons();
+		ShowRadios();
+		ShowComboxes();
+		show();
 	}
 
 	public void showAddButton() {
@@ -22,8 +24,8 @@ public class Person {
 
 	}
 
-	public ProductMenu createProductMenu() {
-		return null;
+	public void showComboxes() {
+
 	}
 
 }

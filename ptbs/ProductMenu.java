@@ -1,3 +1,4 @@
+package ptbs;
 public interface ProductMenu {
 
 	public void showMenu();

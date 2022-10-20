@@ -1,4 +1,7 @@
-public class NodeVisitor {
+package ptbs;
+public class ReminderVisitor extends NodeVisitor {
+
+	private Reminder m_Reminder;
 
 	public void visitProduct(Product product) {
 
