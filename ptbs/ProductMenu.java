@@ -1,5 +1,6 @@
 package ptbs;
-public interface ProductMenu {
+
+public interface ProductMenu{
 	
 	public void showAddButton();
 
@@ -11,6 +12,6 @@ public interface ProductMenu {
 
 	public void showComboxes();
 
-	public void showMenu(Trading theTrading, Person thePerson);
+	public void showMenu();
 
 }

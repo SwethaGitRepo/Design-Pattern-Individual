@@ -11,6 +11,6 @@ public interface UserMenu {
 
 	public void showComboxes();
 
-	public void showMenu();
+	public void showMenu(Product prdct, Person thePerson);
 
 }

@@ -6,6 +6,7 @@ public class ProductIterator {
 
 	private ClassProductList theProductList;
 	int currentProductNumber = -1;
+	
 	public ProductIterator(ClassProductList productList) {
 		theProductList = productList;
 	}

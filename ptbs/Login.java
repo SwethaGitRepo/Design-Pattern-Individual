@@ -95,10 +95,6 @@ public class Login extends JDialog {
             while ((aline = file.readLine()) != null) {
                 userName = getUserName(aline);
                 password = GetPassword(aline);
-                //System.out.println("userName " + userName);
-                //System.out.println("password " + password);
-                //System.out.println(userBox);
-                //System.out.println(passwordBox);
 
                 if (userName.compareTo(userBox) == 0 && password.compareTo(passwordBox) == 0)
                 {
@@ -106,7 +102,8 @@ public class Login extends JDialog {
                 }
             }
             if (loginName != null) {
-            	m_bExit = true;
+            	JOptionPane.showMessageDialog(this, "Facade Pattern Implemented Successfully",
+                        "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
                 this.hide();
             }
             else

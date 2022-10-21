@@ -2,6 +2,7 @@ package ptbs;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import ptbs.UserInfoItem.UserType;
 
 public class Facade {
 
@@ -11,7 +12,7 @@ public class Facade {
 
 	private int nProductCategory;
 
-	 ProductList theProductList;
+	ClassProductList theProductList;
 
 	private Person thePerson;
 	public boolean login(UserInfoItem userinfoItem)
@@ -21,12 +22,13 @@ public class Facade {
 		login.show();
 		userinfoItem.userName = login.getUserName();
 		userinfoItem.userType = login.getUserType();
+		System.out.println(login.isExit());
 		return login.isExit();
 	}
 
 	public void addTrading()
 	{
-		UserMenu theUserMenu;
+		/*UserMenu theUserMenu;
 		if (thePerson.type == 0)/// 
 		{
 			theUserMenu = new BuyerMenu();
@@ -37,11 +39,20 @@ public class Facade {
 		}
 		//Trading theTrading = new Trading();
 		//theProductMenu.showMenu(theTrading, thePerson);
-		//theTrading.AddAssignment(theTrading);
+		//theTrading.AddAssignment(theTrading);*/
 	}
 
-	public void viewTrading() {
-
+	public void viewTrading(UserInfoItem.UserType userType) {
+		if (userType == UserType.Buyer)/// buyer
+		{
+			Buyer buyerMenu = new Buyer();
+			buyerMenu.showMenu();
+		} 
+		else 
+		{
+			Seller sellerMenu = new Seller();
+			sellerMenu.showMenu();
+		}
 	}
 
 	public void decideBidding() {
@@ -63,8 +74,11 @@ public class Facade {
 	public void createUser(UserInfoItem userinfoitem) {
 
 	}
-
+	
 	public void createProductList() {
+		
+		theProductList = new ClassProductList();
+		theProductList.readFileAndGetList("ProductInfo.txt");
 
 	}
 
