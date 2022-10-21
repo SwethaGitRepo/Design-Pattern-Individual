@@ -22,7 +22,7 @@ public class Facade {
 		login.setVisible(true);
 		userinfoItem.userName = login.getUserName();
 		userinfoItem.userType = login.getUserType();
-		System.out.println(login.isExit());	
+		//System.out.println(login.isExit());	
 		return login.isExit();
 	}
 
@@ -86,7 +86,7 @@ public class Facade {
 	{
 		BufferedReader file;
 		try {
-			file = new BufferedReader(new FileReader("ptbs/UserProduct.txt"));
+			file = new BufferedReader(new FileReader("src/ptbs/UserProduct.txt"));
 			String aline, strUserName, strProductName;
 			while ((aline = file.readLine()) != null) // not the EOF
 			{

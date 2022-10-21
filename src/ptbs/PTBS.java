@@ -9,9 +9,9 @@ public class PTBS
         {
         	System.out.println("Facade Pattern implemented Successfully");
             facadeObj.createProductList();
-        	System.out.println("Product List Created");
+        	//System.out.println("Product List Created");
             facadeObj.attachProductToUser();
-        	System.out.println("Product attached to user");
+        	//System.out.println("Product attached to user");
             facadeObj.viewTrading(userinfoitem.userType);
             facadeObj.addTrading();
             facadeObj.decideBidding();

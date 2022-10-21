@@ -15,7 +15,7 @@ public class ClassProductList extends ArrayList<Product> {
 				Product theProduct;
 				theProduct = new Product(strProductName, 0);
 				add(theProduct);
-				System.out.println("readFileAndGetList" + theProduct);
+				//System.out.println("readFileAndGetList" + theProduct);
 			}
 		} catch (Exception ee) {
 			;

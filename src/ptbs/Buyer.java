@@ -35,7 +35,7 @@ public class Buyer extends Person {
 		setLocation(400,200);
     	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setTitle("Buyer portal");
-		System.out.println("Select the type of product you want to buy");
+		//System.out.println("Select the type of product you want to buy");
 		jLabel1.setText("Select the type of product you want to buy");
 		jLabel1.setBounds(new Rectangle(40, 36, 300, 35));
 		this.getContentPane().setLayout(null);
@@ -84,7 +84,8 @@ public class Buyer extends Person {
 			boolSubmit = true;
             if (meatRadio.isSelected() == true)// meat
             {
-            	System.out.println("Selected meat");
+            	System.out.println("Bridge Pattern Implemented Successfully");
+            	System.out.println("User selected meat");
             	JOptionPane.showMessageDialog(this, "Bridge Pattern Implemented Successfully",
                         "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
             	hide();
@@ -92,7 +93,8 @@ public class Buyer extends Person {
             }
             else// produce
             {
-            	System.out.println("Selected produce");
+            	System.out.println("Bridge Pattern Implemented Successfully");
+            	System.out.println("User selected produce");
             	JOptionPane.showMessageDialog(this, "Bridge Pattern Implemented Successfully",
                         "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
             	hide();

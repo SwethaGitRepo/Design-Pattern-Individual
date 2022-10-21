@@ -1,5 +1,13 @@
 package ptbs;
+import javax.swing.*;
+
 import ptbs.Product.ProductName;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MeatProductMenu extends Product implements ProductMenu{
 	
@@ -51,11 +59,11 @@ public class MeatProductMenu extends Product implements ProductMenu{
 		{
 			String strProductName;
 			int y=75;
-			BufferedReader file = new BufferedReader(new FileReader("ptbs/ProductInfo.txt"));
+			BufferedReader file = new BufferedReader(new FileReader("src/ptbs/ProductInfo.txt"));
 			String aline = null;
             while ((aline = file.readLine()) != null) {
 				strProductName = getProductName(aline);
-				System.out.println("Type");
+				//System.out.println("Type");
 				if (strProductName.compareTo(productName.toString()) == 0)
                 {
 					String meatType = getProductType(aline);
@@ -126,6 +134,8 @@ public class MeatProductMenu extends Product implements ProductMenu{
 	}
 	
 	void bAdd_actionPerformed(ActionEvent e) {
+		System.out.println("Iterator and Factory Pattern Implemented Successfully");
+		System.out.println("User selected the type of meat");
 		JOptionPane.showMessageDialog(this, "Iterator and Factory Pattern Implemented Successfully",
                 "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
 		hide();

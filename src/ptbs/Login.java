@@ -77,19 +77,17 @@ public class Login extends JDialog {
     void loginButton_actionPerformed(ActionEvent e) {
         BufferedReader file;
         m_bExit = false;
-        System.out.println("login clicked");
+        System.out.println("User logged into the app");
         try {
             if (buyerRadio.isSelected() == true)// Buyer
             {
                 userType = UserType.Buyer; // 0 for Buyer
-                System.out.println("Buyer login");
-                file = new BufferedReader(new FileReader("ptbs/BuyerInfo.txt"));
-                //System.out.println("buyer info read in file");
+                file = new BufferedReader(new FileReader("src/ptbs/BuyerInfo.txt"));
             }
             else// Seller
             {
                 userType = UserType.Seller; // 1 for Seller
-                file = new BufferedReader(new FileReader("ptbs/SellerInfo.txt"));
+                file = new BufferedReader(new FileReader("src/ptbs/SellerInfo.txt"));
             }
             userBox = userNameText.getText();
             String passwordBox = new String(passwordText.getPassword());

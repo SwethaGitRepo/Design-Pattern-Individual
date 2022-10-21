@@ -36,7 +36,7 @@ public class Seller extends Person {
 		setLocation(400,200);
     	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         setTitle("Seller portal");
-		System.out.println("Select the type of product that you sell");
+		//System.out.println("Select the type of product that you sell");
 		jLabel1.setText("Select the type of product that you sell");
 		jLabel1.setBounds(new Rectangle(40, 36, 300, 35));
 		this.getContentPane().setLayout(null);

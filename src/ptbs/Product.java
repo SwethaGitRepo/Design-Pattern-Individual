@@ -1,5 +1,4 @@
 package ptbs;
-
 import javax.swing.JDialog;
 
 import ptbs.UserInfoItem.UserType;

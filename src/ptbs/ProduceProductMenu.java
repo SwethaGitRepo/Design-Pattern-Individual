@@ -59,14 +59,14 @@ public class ProduceProductMenu extends Product implements ProductMenu{
 		{
 			String strProductName;
 			int y=75;
-			BufferedReader file = new BufferedReader(new FileReader("ptbs/ProductInfo.txt"));
+			BufferedReader file = new BufferedReader(new FileReader("src/ptbs/ProductInfo.txt"));
 			String aline = null;
             while ((aline = file.readLine()) != null) {
 				strProductName = getProductName(aline);
-				System.out.println(productName.toString());
+				//System.out.println(productName.toString());
 				if (strProductName.compareTo(productName.toString()) == 0)
                 {
-					System.out.println("strprname "+strProductName);
+					//System.out.println("strprname "+strProductName);
 					String produceType = getProductType(aline);
 					productList.add(produceType);
                 }
@@ -128,6 +128,8 @@ public class ProduceProductMenu extends Product implements ProductMenu{
 	}
 	
 	void bAdd_actionPerformed(ActionEvent e) {
+		System.out.println("Iterator and Factory Pattern Implemented Successfully");
+		System.out.println("User selected the type of produce");
 		JOptionPane.showMessageDialog(this, "Iterator and Factory Pattern Implemented Successfully",
                 "SUCCESS", JOptionPane.INFORMATION_MESSAGE);
 		hide();
