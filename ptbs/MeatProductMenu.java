@@ -1,13 +1,5 @@
 package ptbs;
-import javax.swing.*;
-
 import ptbs.Product.ProductName;
-
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MeatProductMenu extends Product implements ProductMenu{
 	
@@ -120,7 +112,10 @@ public class MeatProductMenu extends Product implements ProductMenu{
 	}
 
 	public void showLabels() {
-		jLabel1.setText("Meat");
+		setLocation(400,200);
+    	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Meat");
+		jLabel1.setText("Type of Meat ");
         jLabel1.setBounds(new Rectangle(15, 15, 80, 18));
 		this.getContentPane().add(jLabel1, null);
 

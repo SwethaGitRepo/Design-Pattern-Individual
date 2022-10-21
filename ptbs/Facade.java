@@ -19,10 +19,10 @@ public class Facade {
 	{
 		Login login = new Login();
 		login.setModal(true);
-		login.show();
+		login.setVisible(true);
 		userinfoItem.userName = login.getUserName();
 		userinfoItem.userType = login.getUserType();
-		System.out.println(login.isExit());
+		System.out.println(login.isExit());	
 		return login.isExit();
 	}
 
@@ -39,16 +39,16 @@ public class Facade {
 		}
 		//Trading theTrading = new Trading();
 		//theProductMenu.showMenu(theTrading, thePerson);
-		//theTrading.AddAssignment(theTrading);*/
+		//theTrading.AddProduct(theTrading);*/
 	}
 
 	public void viewTrading(UserInfoItem.UserType userType) {
-		if (userType == UserType.Buyer)/// buyer
+		if (userType == UserType.Buyer) // buyer
 		{
 			Buyer buyerMenu = new Buyer();
 			buyerMenu.showMenu();
 		} 
-		else 
+		else //Seller
 		{
 			Seller sellerMenu = new Seller();
 			sellerMenu.showMenu();
@@ -92,10 +92,10 @@ public class Facade {
 			{
 				strUserName = getUserName(aline);
 				strProductName = getProductName(aline);
-				if (strUserName.compareTo(thePerson.userName) == 0) /// the UserName mateches
+				if (strUserName.compareTo(thePerson.userName) == 0) // the UserName matches
 				{
 					theSelectedProduct = findProductByItsName(strProductName);
-					if (theSelectedProduct != null) /// Find the product in the productList--->attach
+					if (theSelectedProduct != null) // Find the product in the productList--->attach
 					{
 						thePerson.addProduct(theSelectedProduct);
 					}

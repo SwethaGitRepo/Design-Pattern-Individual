@@ -32,6 +32,9 @@ public class Buyer extends Person {
 	}
 	
 	private void jbInit() throws Exception {
+		setLocation(400,200);
+    	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Buyer portal");
 		System.out.println("Select the type of product you want to buy");
 		jLabel1.setText("Select the type of product you want to buy");
 		jLabel1.setBounds(new Rectangle(40, 36, 300, 35));

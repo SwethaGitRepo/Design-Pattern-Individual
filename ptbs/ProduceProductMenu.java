@@ -114,7 +114,10 @@ public class ProduceProductMenu extends Product implements ProductMenu{
 	}
 
 	public void showLabels() {
-		jLabel1.setText("Produce");
+		setLocation(400,200);
+    	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Produce");
+		jLabel1.setText("Type of Produce");
         jLabel1.setBounds(new Rectangle(15, 15, 80, 18));
 		this.getContentPane().add(jLabel1, null);
 

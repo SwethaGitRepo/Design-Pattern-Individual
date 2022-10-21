@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.io.*;
 public class Login extends JDialog {
 
-    boolean m_bExit = false;
+    boolean m_bExit = true;
     JLabel jLabel1 = new JLabel();
     JLabel jLabel2 = new JLabel();
     JButton loginButton = new JButton();
@@ -33,6 +33,9 @@ public class Login extends JDialog {
     }
 
     private void jbInit() throws Exception {
+    	setLocation(500,200);
+    	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Welcome to PTBS System");
         this.getContentPane().setLayout(null);
         jLabel1.setText("UserName");
         jLabel1.setBounds(new Rectangle(26, 52, 80, 18));

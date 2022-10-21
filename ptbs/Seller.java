@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
@@ -32,6 +33,9 @@ public class Seller extends Person {
 	}
 	
 	private void jbInit() throws Exception {
+		setLocation(400,200);
+    	setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setTitle("Seller portal");
 		System.out.println("Select the type of product that you sell");
 		jLabel1.setText("Select the type of product that you sell");
 		jLabel1.setBounds(new Rectangle(40, 36, 300, 35));
